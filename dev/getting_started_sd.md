@@ -52,7 +52,7 @@ $ ls
 $ sudo dd if=db410c_sd_install_android.img of=/dev/rdisk4
 ```
 
-Androidイメージの場合
+Androidイメージの場合(この処理には2分ぐらいかかります)
 ```bash
 $ cd 解凍先のフォルダ
 $ ls
