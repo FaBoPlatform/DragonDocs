@@ -41,8 +41,8 @@ $ sudo diskutil unmountDisk /dev/disk4
 
 DragonBoardのイメージをダウンロードし解凍し、*.img形式のデータを、ddコマンドでSDカードに焼き込みます。
 
-* [Debian SD Card Install image](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/dragonboard410c_sdcard_install_debian*.zip]
-* [Android SD Card Install image](http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/latest/dragonboard410c_sdcard_install_android*.zip]
+* [Debian SD Card Install image](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/dragonboard410c_sdcard_install_debian*.zip)
+* [Android SD Card Install image](http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/latest/dragonboard410c_sdcard_install_android*.zip)
 
 
 Debianイメージの場合
