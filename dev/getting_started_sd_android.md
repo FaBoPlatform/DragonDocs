@@ -3,9 +3,7 @@
 DragonBoardへのイメージのインストールは、SDカードからのインストールと、Fastboot(Android系)によるインストールの2系統が用意されています。
 本項では、SDからのイメージのインストールに関して解説します。Fastbootからのインストールの方法を知りたい方は、下記を参照ください。
 
-* [FastbootからのLinuxイメージのインストール(方法2)](getting_started_fastboot_linux.md)
-* [FastbootからのAndroidイメージのインストール(方法2)](getting_started_fastboot_android.md)
-
+* [FastbootからのAndroidイメージのインストール](getting_started_fastboot_android.md)
 
 ## 準備するもの
 
@@ -14,8 +12,7 @@ DragonBoardへのイメージのインストールは、SDカードからのイ�
 
 ## イメージのRepository
 
-* [Debian Repository(http://builds.96boards.org/releases/dragonboard410c/linaro/debian/]
-* [Android Repositiry](http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/]
+* [Android Repositiry](http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/)
 
 ## SDカードのディレクトリを取得
 
@@ -47,21 +44,6 @@ $ cd 解凍先のフォルダ
 $ ls
 $ db410c_sd_install_android.img	license.txt
 $ sudo dd if=db410c_sd_install_android.img of=/dev/rdisk4 bs=4m 
-```
-
-## DebianのイメージをDDコマンドでSDカードに焼き込む
-
-* [Debian](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/)
-[Image version 100](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/16.06/dragonboard410c_sdcard_install_debian-110.zip)で動作
-
-今回は、[Image version 100](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/16.06/dragonboard410c_sdcard_install_debian-110.zip)をダウンロードします。
-
-Debianイメージの場合
-
-```bash
-$ cd 解凍先のフォルダ
-$ ls 
-$ sudo dd if=db410c_sd_install_android.img of=/dev/rdisk4
 ```
 
 ## DragonBoardでの実行
