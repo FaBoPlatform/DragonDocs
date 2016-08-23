@@ -12,14 +12,10 @@ DragonBoardへのイメージのインストールは、SDカードからのイ�
 * DragonBoad本体
 * SDカード
 
-## インストールするもの
+## イメージのRepository
 
-DebianもしくはAndroidのイメージをインストール可能です。
-
-* [Debian SD Card Install image](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/dragonboard410c_sdcard_install_debian*.zip]
-* [Android SD Card Install image](http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/latest/dragonboard410c_sdcard_install_android*.zip]
-
-上記のいずれかのイメージをダウンロードしておきます。
+* [Debian Repository(http://builds.96boards.org/releases/dragonboard410c/linaro/debian/]
+* [Android Repositiry](http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/]
 
 ## SDカードのディレクトリを取得
 
@@ -41,22 +37,28 @@ $ sudo diskutil unmountDisk /dev/disk4
 
 DragonBoardのイメージをダウンロードし解凍し、*.img形式のデータを、ddコマンドでSDカードに焼き込みます。
 
-* [Debian SD Card Install image](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/dragonboard410c_sdcard_install_debian*.zip)
-* [Android SD Card Install image](http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/latest/dragonboard410c_sdcard_install_android*.zip)
+* [Android](http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/)
+[ImageVersion #99](http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/16.03/dragonboard410c_sdcard_install_android-99.zip)は正常動作、[ImageVersion #118](http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/16.06/dragonboard410c_sdcard_install_android-118.zip)が「Unfortunately, the process com.android.phone has stopped」のエラーがでてまともに操作できず。
 
+今回は、[ImageVersion #99](http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/16.03/dragonboard410c_sdcard_install_android-99.zip)のイメージをダウンロードします。
 
-Debianイメージの場合
-```bash
-$ cd 解凍先のフォルダ
-$ ls 
-$ sudo dd if=db410c_sd_install_android.img of=/dev/rdisk4
-```
-
-Androidイメージの場合(この処理には2分ぐらいかかります)
 ```bash
 $ cd 解凍先のフォルダ
 $ ls
 $ db410c_sd_install_android.img	license.txt
+$ sudo dd if=db410c_sd_install_android.img of=/dev/rdisk4 bs=4m 
+```
+
+* [Debian](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/)
+[Image version 100](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/16.06/dragonboard410c_sdcard_install_debian-110.zip)で動作
+
+今回は、[Image version 100](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/16.06/dragonboard410c_sdcard_install_debian-110.zip)をダウンロードします。
+
+Debianイメージの場合
+
+```bash
+$ cd 解凍先のフォルダ
+$ ls 
 $ sudo dd if=db410c_sd_install_android.img of=/dev/rdisk4
 ```
 
@@ -82,4 +84,6 @@ Installメニューがあらわれるので、Imageを選択しInstall(i)を選�
 DIP Switchを元どおりにして、再起動します。
 
 ![](/img/dev/dev003.png)
+
+Androidの場合、初回再起動時には、起動に2分程度時間があかります。
 
