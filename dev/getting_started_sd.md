@@ -33,7 +33,7 @@ SDカードをアンマウントします。
 $ sudo diskutil unmountDisk /dev/disk4
 ```
 
-## インストールしたいイメージをDDコマンドでSDカードに焼き込む
+## AndroidのイメージをDDコマンドでSDカードに焼き込む
 
 DragonBoardのイメージをダウンロードし解凍し、*.img形式のデータを、ddコマンドでSDカードに焼き込みます。
 
@@ -48,6 +48,8 @@ $ ls
 $ db410c_sd_install_android.img	license.txt
 $ sudo dd if=db410c_sd_install_android.img of=/dev/rdisk4 bs=4m 
 ```
+
+## DebianのイメージをDDコマンドでSDカードに焼き込む
 
 * [Debian](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/)
 [Image version 100](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/16.06/dragonboard410c_sdcard_install_debian-110.zip)で動作
