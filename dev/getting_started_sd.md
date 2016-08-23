@@ -16,12 +16,12 @@ DragonBoardへのイメージのインストールは、SDカードからのイ�
 
 DebianもしくはAndroidのイメージをインストール可能です。
 
-* [http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/dragonboard410c_sdcard_install_debian*.zip](Debian SD Card Install image)
-* [http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/latest/dragonboard410c_sdcard_install_android*.zip](Android SD Card Install image)
+* [Debian SD Card Install image](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/dragonboard410c_sdcard_install_debian*.zip]
+* [Android SD Card Install image](http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/latest/dragonboard410c_sdcard_install_android*.zip]
 
 上記のいずれかのイメージをダウンロードしておきます。
 
-## イメージの作成(OS X, El capitan)
+## SDカードのディレクトリを取得
 
 MacBookにSDカードを挿し、SDカードのディレクトリを確認します。(以下、SDカードが/dev/disk4だった場合の解説)
 
@@ -29,22 +29,33 @@ MacBookにSDカードを挿し、SDカードのディレクトリを確認しま
 $ sudo diskutil list
 ```
 
-SDカードをマウントします。。
+## SDカードをアンマウント
 
+SDカードをアンマウントします。
 
 ```bash
 $ sudo diskutil unmountDisk /dev/disk4
 ```
 
-DragonBoardのイメージをSDカードに焼き込みます。
+## インストールしたいイメージをDDコマンドでSDカードに焼き込む
+
+DragonBoardのイメージをダウンロードし解凍し、*.img形式のデータを、ddコマンドでSDカードに焼き込みます。
+
+* [Debian SD Card Install image](http://builds.96boards.org/releases/dragonboard410c/linaro/debian/latest/dragonboard410c_sdcard_install_debian*.zip]
+* [Android SD Card Install image](http://builds.96boards.org/releases/dragonboard410c/qualcomm/android/latest/dragonboard410c_sdcard_install_android*.zip]
+
 
 Debianイメージの場合
 ```bash
+$ cd 解凍先のフォルダ
+$ ls 
 $ sudo dd if=db410c_sd_install_android.img of=/dev/rdisk4
 ```
 
 Androidイメージの場合
 ```bash
+$ cd 解凍先のフォルダ
+$ ls
 $ sudo dd if=db410c_sd_install_android.img of=/dev/rdisk4
 ```
 
