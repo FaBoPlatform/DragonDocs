@@ -18,7 +18,7 @@ $ sudo apt-get update
 $ sudo apt-get install autoconf automake libtool
 ```
 
-## Libsoc
+## libsoc
 
 ```bash
 $ git clone https://github.com/jackmitch/libsoc.git
@@ -34,7 +34,7 @@ $ sudo make install
 96BoardsGPIO GitHubリポジトリからクローンしてコンパイルします。
 
 ```bash
-$ git clone 
+$ git clone https://github.com/96boards/96BoardsGPIO.git
 $ cd 96BoardsGPIO
 $ ./autogen.sh
 $ ./configure
