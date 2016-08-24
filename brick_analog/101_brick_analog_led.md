@@ -17,15 +17,37 @@ OUTコネクタのいずれかに接続します。
 
 ## Sample Code
 
-OUT1コネクタにLED Brickを接続し、一定時間ごとに点灯/消灯させています。
+GPIO-AコネクタにLED Brickを接続し、一定時間ごとに点灯/消灯させています。
 
-```basic
-100 'led_sample_program
-110 OUT 1,1
-120 WAIT 60
-130 OUT 1,0
-140 WAIT 60
-150 GOTO 110
+```Python
+#!/usr/bin/python
+import time
+
+from gpio_96boards import GPIO
+
+GPIO_A = GPIO.gpio_id('GPIO_A')
+pins = (
+    (GPIO_A, 'out'),
+)
+
+
+def blink(gpio):
+    for i in range(5):
+        gpio.digital_write(GPIO_A, GPIO.HIGH)
+        time.sleep(i)
+        gpio.digital_write(GPIO_A, GPIO.LOW)
+        time.sleep(1)
+
+
+if __name__ == '__main__':
+    import argparse
+
+    parser = argparse.ArgumentParser(
+        description='Blink LED on GPIO A (pin 23)')
+    args = parser.parse_args()
+
+    with GPIO(pins) as gpio:
+        blink(gpio)
 ```
 
 ## 構成Parts
