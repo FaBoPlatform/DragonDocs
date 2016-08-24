@@ -48,9 +48,9 @@ $ sudo ldconfig
 GPIO-AにLED Brickを接続します。
 
 ```bash
-cd 96BoardsGPIO/examples
-make
-sudo ./blink
+$ cd 96BoardsGPIO/examples
+$ make
+$ sudo ./blink
 ```
 
 ```bash
