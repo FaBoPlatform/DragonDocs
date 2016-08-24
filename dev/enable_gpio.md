@@ -47,6 +47,8 @@ $ sudo ldconfig
 
 GPIO-AにLED Brickを接続します。
 
+![](/img/dev/dev007.png)
+
 ```bash
 $ cd 96BoardsGPIO/examples
 $ make
