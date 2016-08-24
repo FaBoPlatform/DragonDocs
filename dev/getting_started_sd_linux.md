@@ -62,10 +62,10 @@ DIP Switchの意味
 
 Installメニューがあらわれるので、Imageを選択しInstall(i)を選択し、ImageをeMMC(Flashメモリ)にコピーします。
 
-![](/img/dev/dev002.png)
+![](/img/dev/dev006.png)
 
 DIP Switchを元どおりにして、再起動します。
 
-![](/img/dev/dev006.png)
+![](/img/dev/dev003.png)
 
 
