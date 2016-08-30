@@ -1,6 +1,8 @@
 FaBo DragonBoard
 =======
 
+![](/img/title_dragon.png)
+
 # 本ドキュメントについて
 
 IoT入門者向けのプログラム学習用のドキュメントになっています。
